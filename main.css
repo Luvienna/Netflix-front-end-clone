@@ -1,0 +1,262 @@
+:root {
+            --almost-black: #010117;
+            --yankees-blue: #191B37;
+            --pictorial-carmine: #AE0B49;
+            --razzmatazz: #E21C70;
+            --hot-pink: #F966AB;
+            --queen-pink: #ffffff;
+            --white: #fff;
+        }
+
+
+/*=================== LANDING PAGE ====================*/
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--almost-black);
+    color: var(--queen-pink);
+    position: relative;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+/* Aura Effect for the entire background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200vw;
+    height: 200vw;
+    background: radial-gradient(circle, var(--yankees-blue) 0%, transparent 70%);
+    filter: blur(150px);
+    z-index: -1;
+    animation: pulse-aura 10s infinite alternate;
+}
+
+@keyframes pulse-aura {
+    from { transform: translate(-50%, -50%) scale(1); }
+    to { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+
+.scroll-container {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: var(--razzmatazz);
+    border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background-color: var(--yankees-blue);
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+
+/*====================== HOME PAGE ==================*/
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--almost-black);
+    color: var(--queen-pink);
+    overflow-x: hidden;
+}
+
+.scroll-container {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: var(--razzmatazz);
+    border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background-color: var(--yankees-blue);
+}
+
+/* New styles to hide the scrollbar */
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Removed padding from content-row to fix clipping issue */
+.content-row {
+    padding: 0;
+}
+
+/* Custom glow effect on hover */
+.card-container:hover .card-img {
+    box-shadow: 0 0 15px var(--razzmatazz);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-img {
+    transition: all 0.3s ease-in-out;
+}
+
+.card-container:hover .card-title {
+    color: var(--hot-pink);
+    transition: color 0.3s ease-in-out;
+}
+
+/* Footer specific styles */
+.footer-link {
+    font-size: 0.875rem; /* text-sm */
+    color: #d1d5db; /* gray-400 */
+    transition-property: color;
+    transition-duration: 300ms;
+}
+
+.footer-link:hover {
+    color: #ffffff; /* white */
+    text-decoration: underline;
+}
+
+/* Hover effect for Netflix-style cards */
+.card-container {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+    transform-origin: center center; /* Adjusted to fix clipping */
+    border-radius: 0.5rem;
+    overflow: visible;
+}
+
+.card-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    transition: border-radius 0.3s ease-in-out;
+}
+
+/* Hidden info panel */
+.card-info {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #1e293b;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.card-container:hover {
+    transform: scale(1.15);
+    z-index: 10;
+}
+
+.card-container:hover img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card-container:hover .card-info {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    padding: 1rem;
+}
+
+/* Buttons inside the hover info */
+.btn-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.action-btn {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    padding: 0.75rem;
+    border-radius: 50%;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+                0 2px 4px -2px rgb(0 0 0 / 0.1);
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn:hover {
+    background-color: #334155;
+    transform: translateY(-2px);
+}
+/* Smaller button size */
+.action-btn {
+    width: 3rem; /* Smaller fixed width */
+    height: 3rem; /* Smaller fixed height */
+    padding: 0;
+}
+.action-btn .fas {
+    font-size: 1rem; /* Smaller icon size */
+}
+
+/* New styles for meta and genres */
+.meta-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: #9ca3af; /* A lighter grey for meta info */
+    margin-top: 0.5rem;
+}
+
+.meta-row .match {
+    color: #4ade80; /* A green color for the match percentage */
+    font-weight: bold;
+}
+
+.meta-row .age-rating {
+    border: 1px solid #9ca3af;
+    padding: 0.1rem 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.genres {
+    font-size: 0.75rem; /* text-xs */
+    color: #d1d5db; /* A lighter grey */
+    margin-top: 0.5rem;
+}
+
+/* Page transition effect */
+body {
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+}

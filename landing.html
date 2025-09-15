@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetFlix Clone</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="bg-[--almost-black]">
+
+    <!-- Hero Section -->
+    <div class="relative flex flex-col justify-center items-center text-center bg-cover bg-center bg-no-repeat hero-section h-screen">
+    <div class="absolute inset-0 z-0"
+     style="
+       background-image: url('netflix images/netflix hero.jpg');
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;">
+    </div>
+
+
+        <!-- Header -->
+        <header class="absolute top-0 left-0 right-0 z-10 p-4 sm:p-6 md:p-8 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-[#ff69b4]">Netflix</h1> 
+            <a href="#" class="bg-[--razzmatazz] hover:bg-[--hot-pink] text-white font-medium py-2 px-6 rounded-full shadow-lg transition-colors duration-300 transform hover:scale-105">
+                Sing In
+            </a>
+        </header>
+
+
+        <!-- Hero Content -->
+    <main class="z-10 p-4 sm:p-6 md:p-8 lg:p-12">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white">
+        <span class="bg-clip-text text-transparent" style="background-image: linear-gradient(to right, var(--razzmatazz), var(--hot-pink));">Unlimited movies, TV Shows, and more</span>
+        </h1>
+        <p class="mt-4 text-xl sm:text-1xl md:text-1xl font-medium text-[--white]">
+            Starts at USD 10.99. Cancel anytime.
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
+    <div class="mt-6 flex justify-center">
+  <form action="home.html" class="flex w-full sm:w-auto">
+    <input
+      type="email"
+      placeholder="Email address"
+      class="flex-1 h-14 px-10 bg-[--yankees-blue] bg-opacity-80
+             border-2 border-[--queen-pink] text-[--queen-pink]
+             placeholder-[--queen-pink] focus:outline-none
+             focus:border-[--razzmatazz] shadow-md
+             rounded-l-md"   <!-- rounded only on the left -->
+    <button
+      type="submit"
+      class="h-14 px-6 bg-[--razzmatazz] hover:bg-[--hot-pink]
+             text-white font-medium shadow-md
+             rounded-r-md transition-colors duration-300
+             flex items-center justify-center"
+    >
+      Get started
+    </button>
+  </form>
+</div>
+
+
+    </div>
+    </main>
+
+    </div>
+
+    <!-- Straight Separator with Gradient -->
+    <div class="w-full h-2 mt-[-1px] bg-gradient-to-r from-[--razzmatazz] to-[--hot-pink]"></div>
+
+     <!-- Trending Now Section -->
+    <section class="py-24 md:py-28">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="flex justify-between items-end mb-6">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Trending Now</h2>
+            </div>
+            <div class="relative overflow-hidden group">
+                <div id="scroll-container" class="flex gap-4 p-2 overflow-x-scroll whitespace-nowrap hide-scrollbar">
+                    <!-- Movie Cards -->
+                    <div class="relative flex-none w-[80px] sm:w-[50px] md:w-[50px] lg:w-[20px] xl:w-[280px] transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://i.pinimg.com/736x/6a/87/64/6a8764c96d1d00bd76ee1f58f788e480.jpg" alt="Wednesday Poster" class="w-full h-auto rounded-xl shadow-lg">
+                        <div class="absolute bottom-4 left-4 text-white text-7xl font-extrabold opacity-70">1</div>
+                    </div>
+                    <div class="relative flex-none w-[80px] sm:w-[50px] md:w-[50px] lg:w-[20px] xl:w-[265px] transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://i.pinimg.com/1200x/1e/f5/5e/1ef55e6335a89b5f6471629af046f52d.jpg" alt="The Negotiator Poster" class="w-full h-auto rounded-xl shadow-lg">
+                        <div class="absolute bottom-4 left-4 text-white text-7xl font-extrabold opacity-70">2</div>
+                    </div>
+                    <div class="relative flex-none w-[80px] sm:w-[50px] md:w-[50px] lg:w-[20px] xl:w-[292px] transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://i.pinimg.com/736x/3e/d8/5d/3ed85dd65f6c3ab5fb50bbcd5b9eb613.jpg" alt="My Life with the Walter Boys Poster" class="w-full h-auto rounded-xl shadow-lg">
+                        <div class="absolute bottom-4 left-4 text-white text-7xl font-extrabold opacity-70">3</div>
+                    </div>
+                    <div class="relative flex-none w-[80px] sm:w-[50px] md:w-[50px] lg:w-[20px] xl:w-[285px] transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://i.pinimg.com/1200x/af/65/d3/af65d3727a61cce878a676656eb902ab.jpg" alt="Beauty in Black" class="w-full h-auto rounded-xl shadow-lg">
+                        <div class="absolute bottom-4 left-4 text-white text-7xl font-extrabold opacity-70">4</div>
+                    </div>
+                    <div class="relative flex-none w-[80px] sm:w-[50px] md:w-[50px] lg:w-[20px] xl:w-[238px] transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://i.pinimg.com/1200x/4b/86/e1/4b86e18b0a43210ff79558f3ed211b62.jpg" alt="K-POP Demon Hunters" class="w-full h-auto rounded-xl shadow-lg">
+                        <div class="absolute bottom-4 left-4 text-white text-7xl font-extrabold opacity-70">5</div>
+                    </div>
+                    <div class="relative flex-none w-[80px] sm:w-[50px] md:w-[50px] lg:w-[20px] xl:w-[255px] transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://i.pinimg.com/1200x/65/9b/fa/659bfa81800eccfed26deb744cff265b.jpg" alt="Arcane" class="w-full h-auto rounded-xl shadow-lg">
+                        <div class="absolute bottom-4 left-4 text-white text-7xl font-extrabold opacity-70">6</div>
+                    </div>
+                    <div class="relative flex-none w-[80px] sm:w-[50px] md:w-[50px] lg:w-[20px] xl:w-[287px] transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://i.pinimg.com/736x/d0/49/fe/d049fe761a21077abfd002b693fd9280.jpg" alt="Adolecense" class="w-full h-auto rounded-xl shadow-lg">
+                        <div class="absolute bottom-4 left-4 text-white text-7xl font-extrabold opacity-70">7</div>
+                    </div>
+                    <div class="relative flex-none w-[80px] sm:w-[50px] md:w-[50px] lg:w-[20px] xl:w-[231px] transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://i.pinimg.com/1200x/00/2f/be/002fbe8334aba00e77c6f9d23267860e.jpg" alt="Stranger Things" class="w-full h-auto rounded-xl shadow-lg">
+                        <div class="absolute bottom-4 left-4 text-white text-7xl font-extrabold opacity-70">8</div>
+                    </div>
+                    <div class="relative flex-none w-[80px] sm:w-[50px] md:w-[50px] lg:w-[20px] xl:w-[239px] transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://i.pinimg.com/736x/b0/a5/e4/b0a5e4551c022373440551cf61784e0c.jpg" alt="Briderton" class="w-full h-auto rounded-xl shadow-lg">
+                        <div class="absolute bottom-4 left-4 text-white text-7xl font-extrabold opacity-70">9</div>
+                    </div>
+                    <div class="relative flex-none w-[80px] sm:w-[50px] md:w-[50px] lg:w-[20px] xl:w-[269px] transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://i.pinimg.com/736x/ad/ed/a8/adeda8bbcc5cb7ed5a608c6c214615c2.jpg" alt="Straw" class="w-full h-auto rounded-xl shadow-lg">
+                        <div class="absolute bottom-4 left-4 text-white text-7xl font-extrabold opacity-70">10</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Sections -->
+    <section class="py-24 md:py-28">
+        <div class="container mx-auto px-4 lg:px-12 flex flex-col md:flex-row items-center justify-between">
+            <div class="w-full md:w-1/2 text-center md:text-left mb-6 md:mb-0">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-white">
+                    Enjoy on your TV.
+                </h2>
+                <p class="mt-4 text-lg sm:text-xl md:text-2xl font-normal leading-relaxed text-[--queen-pink]">
+                    Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 relative">
+                <img src="https://cdn.broadbandtvnews.com/wp-content/uploads/2023/12/13113250/Netflix-Device-Collage.jpg" alt="TV screen" class="relative z-10 mx-auto">
+                <div class="absolute inset-0 z-0">
+                    <video class="w-full h-full object-contain" autoplay muted loop playsinline>
+                        <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 md:py-28">
+        <div class="container mx-auto px-4 lg:px-12 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8">
+                 Frequently Asked Questions
+            </h2>
+            <div id="faq-container" class="max-w-4xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-[--pictorial-carmine] rounded-2xl shadow-lg overflow-hidden">
+                    <button class="faq-button w-full text-left py-4 px-6 text-xl font-medium flex justify-between items-center transition-colors duration-300 hover:bg-[--razzmatazz]">
+                        What is Netflix?
+                        <span class="faq-icon text-3xl transform transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="py-4 px-6 text-lg">
+                            Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+                            You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-[--pictorial-carmine] rounded-2xl shadow-lg overflow-hidden">
+                    <button class="faq-button w-full text-left py-4 px-6 text-xl font-medium flex justify-between items-center transition-colors duration-300 hover:bg-[--razzmatazz]">
+                        Where can i watch?
+                        <span class="faq-icon text-3xl transform transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="py-4 px-6 text-lg">
+                            Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app,
+                            including smart TVs, smartphones, tablets, streaming media players and game consoles.
+                            You can also download your favorite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+                    </div>
+                </div>
+                 <!-- FAQ Item 3 (New) -->
+                <div class="bg-[--pictorial-carmine] rounded-2xl shadow-lg overflow-hidden">
+                    <button class="faq-button w-full text-left py-4 px-6 text-xl font-medium flex justify-between items-center transition-colors duration-300 hover:bg-[--razzmatazz]">
+                        How much does Netflix cost?
+                        <span class="faq-icon text-3xl transform transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="py-4 px-6 text-lg">Plans range from USD 10.99 to USD 19.99 a month. No extra costs, no contracts. All for one fixed fee.</p>
+                    </div>
+                </div>
+                 <!-- FAQ Item 4 (New) -->
+                <div class="bg-[--pictorial-carmine] rounded-2xl shadow-lg overflow-hidden">
+                    <button class="faq-button w-full text-left py-4 px-6 text-xl font-medium flex justify-between items-center transition-colors duration-300 hover:bg-[--razzmatazz]">
+                        Is it kids appropriate?
+                        <span class="faq-icon text-3xl transform transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="py-4 px-6 text-lg">
+                            The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.
+                            Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-[--queen-pink]">
+        <div class="container mx-auto px-4 lg:px-12">
+            <p>&copy; 2024 CuddlyFlix. Made with love and a little bit of magic.</p>
+            <div class="mt-4 flex justify-center items-center space-x-4 text-sm">
+                <a href="#" class="hover:underline">About Us</a>
+                <a href="#" class="hover:underline">Help</a>
+                <a href="#" class="hover:underline">Contact</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="Javascript/main.js"></script>
+</body>
+</html>

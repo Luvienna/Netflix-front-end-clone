@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Main Page</title>
+    <!-- Google Font for a modern, sleek look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css"
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[--almost-black]">
+
+    <!-- Header Section -->
+    <header class="fixed top-0 left-0 right-0 z-50 py-4 px-8 flex justify-between items-center bg-[--almost-black] bg-opacity-90">
+        <!-- Logo -->
+        <div class="flex items-center gap-x-8">
+            <h1 class="text-3xl font-extrabold text-[--hot-pink]">Netflix</h1>
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-6 text-[--queen-pink] font-medium">
+                <a href="home.html" class="hover:text-white transition-colors duration-200 text-white">Home</a>
+                <a href="shows.html" class="hover:text-white transition-colors duration-200">TV Shows</a>
+                <a href="movie.html" class="hover:text-white transition-colors duration-200">Movies</a>
+            </nav>
+        </div>
+
+        <!-- Search and Profile -->
+        <div class="flex items-center gap-x-4">
+            <button class="text-[--queen-pink] hover:text-white transition-colors duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </button>
+            <div class="relative group">
+                <img src="https://placehold.co/40x40/E9CFE8/AE0B49?text=U" alt="User Profile" class="rounded-full border-2 border-[--razzmatazz] cursor-pointer">
+                <!-- Dropdown Menu -->
+                <div class="absolute right-0 mt-2 w-48 bg-[--yankees-blue] rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 origin-top-right">
+                    <a href="#" class="block px-4 py-2 text-[--queen-pink] hover:bg-[--razzmatazz] hover:text-white rounded-t-lg">Account</a>
+                    <a href="#" class="block px-4 py-2 text-[--queen-pink] hover:bg-[--razzmatazz] hover:text-white">Help Center</a>
+                    <a href="#" class="block px-4 py-2 text-[--queen-pink] hover:bg-[--razzmatazz] hover:text-white rounded-b-lg">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="pt-24">
+
+        <!-- Featured Hero Section -->
+        <section 
+  class="relative w-full h-[60vh] md:h-[80vh] bg-cover bg-center bg-no-repeat"
+  style="background-image: url('https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQQpEBlqcpGwncnk92fv0EPbZWHK74ZSzH25JRWrA_qvP_Rtpo5NDQ7Gx-heJJtTbmbjc_aVVOweN6uOgETT-5FjRRmg1Qoz6U9SQ2GH8t-4DLA9VgKgcTIVGEC6BH7xYwiAM-YRNwcxOM0g_G_4DZHDLGVg.jpg?r=0f1');">
+
+            <div class="absolute bottom-10 left-8 md:left-16 z-10 p-4 sm:p-6 md:p-8 lg:p-12">
+                <!-- Swapped h2 text with an image of the logo for better styling -->
+                <img src="netflix images/squid logo.webp" alt="Squid Game Logo" class="w-72 md:w-96 mb-4">
+                <p class="hidden sm:block max-w-lg text-base sm:text-lg md:text-xl text-[--queen-pink] mb-6">
+                    Desperate players competing in deadly children's games for life-changing sums of money.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="flex items-center gap-2 bg-white text-black font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-80 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                        </svg>
+                        Play
+                    </button>
+                    <button class="flex items-center gap-2 bg-[--yankees-blue] text-[--queen-pink] font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[--razzmatazz] transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        More Info
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Rows -->
+        <section class="mt-12 space-y-12">
+
+            <!-- My List -->
+            <div class="content-row">
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 pl-8">My List</h3>
+                <div class="flex overflow-x-scroll scroll-container py-2 gap-4 hide-scrollbar px-8">
+                    <!-- Updated cards with wider hover effect -->
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/ce/7c/1c/ce7c1c3540bdbd6f6f124e6cce3acf83.jpg" alt="The Gentleman" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">The Gentleman</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">98% Match</span>
+                                <span class="age-rating">R</span>
+                                <span>1 Season</span>
+                            </div>
+                            <div class="genres">Crime • Action • Comedy</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/5f/15/90/5f1590c100c9ea786ad668fe4022ebc1.jpg" alt="Wednesday" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Wednesday</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">98% Match</span>
+                                <span class="age-rating">TV-14</span>
+                                <span>1 Season</span>
+                            </div>
+                            <div class="genres">Mystery • Fantasy • Horror</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/736x/c7/69/47/c76947bcd14a799d8cd5a08df9fbea43.jpg" alt="The Sandman" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">The Sandman</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">95% Match</span>
+                                <span class="age-rating">TV-MA</span>
+                                <span>1 Season</span>
+                            </div>
+                            <div class="genres">Fantasy • Drama • Horror</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/f9/e5/da/f9e5daff7c266f1e59a720456b860aec.jpg" alt="Stranger Things" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Stranger Things</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">99% Match</span>
+                                <span class="age-rating">TV-14</span>
+                                <span>4 Seasons</span>
+                            </div>
+                            <div class="genres">Sci-fi • Horror • Fantasy</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/f4/08/d6/f408d64a88c0d0d863ccd40e34408f60.jpg" alt="Brooklyn 99" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Brooklyn 99</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">97% Match</span>
+                                <span class="age-rating">TV-14</span>
+                                <span>8 Seasons</span>
+                            </div>
+                            <div class="genres">Comedy • Crime</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/63/16/f7/6316f738159559f77d6bd9f66e6112f1.jpg" alt="Demon Slayer" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Demon Slayer</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">98% Match</span>
+                                <span class="age-rating">TV-MA</span>
+                                <span>4 Seasons</span>
+                            </div>
+                            <div class="genres">Action • Adventure • Fantasy</div>
+                        </div>
+                    </div>
+                     <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/ce/8c/70/ce8c7018efeb75814bc6593abf7b927e.jpg" alt="Mean Girls" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Mean Girls</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">90% Match</span>
+                                <span class="age-rating">PG-13</span>
+                                <span>Movie</span>
+                            </div>
+                            <div class="genres">Teen • Comedy</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/0d/96/d5/0d96d579a586e39e8cee0bdb485a8534.jpg" alt="Spider-Man Into The Spiderverse" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Spider-Man: Into The Spider-Verse</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">99% Match</span>
+                                <span class="age-rating">PG</span>
+                                <span>Movie</span>
+                            </div>
+                            <div class="genres">Action • Adventure • Animation</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/90/16/2a/90162a018118508882ee7a6e241b4638.jpg" alt="Fear Street Part one: 1994" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Fear Street: 1994</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">95% Match</span>
+                                <span class="age-rating">R</span>
+                                <span>Movie</span>
+                            </div>
+                            <div class="genres">Horror • Mystery • Slasher</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/d5/8c/25/d58c25bf76192ad06b7011bd6a65b16c.jpg" alt="Avatar" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Avatar</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">91% Match</span>
+                                <span class="age-rating">PG-13</span>
+                                <span>Movie</span>
+                            </div>
+                            <div class="genres">Action • Adventure • Sci-Fi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trending Now -->
+            <div class="content-row">
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 pl-8">Trending Today</h3>
+                <div class="flex overflow-x-scroll scroll-container py-2 gap-4 hide-scrollbar px-8">
+                    <!-- Updated cards with wider hover effect -->
+                    <div class="card-container w-[80px] sm:w-[50px] md:w-[50px] lg:w-[20px] xl:w-[188px] transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://i.pinimg.com/736x/6a/87/64/6a8764c96d1d00bd76ee1f58f788e480.jpg" alt="Wednesday Poster" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Wednesday</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">98% Match</span>
+                                <span class="age-rating">TV-14</span>
+                                <span>1 Season</span>
+                            </div>
+                            <div class="genres">Mystery • Fantasy • Horror</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[80px] sm:w-[50px] md:w-[50px] lg:w-[20px] xl:w-[176px] transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://i.pinimg.com/1200x/1e/f5/5e/1ef55e6335a89b5f6471629af046f52d.jpg" alt="The Negotiator Poster" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">The Negotiator</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">85% Match</span>
+                                <span class="age-rating">R</span>
+                                <span>Movie</span>
+                            </div>
+                            <div class="genres">Thriller • Crime • Drama</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[80px] sm:w-[50px] md:w-[50px] lg:w-[20px] xl:w-[250px] transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://i.pinimg.com/736x/3e/d8/5d/3ed85dd65f6c3ab5fb50bbcd5b9eb613.jpg" alt="My Life with the Walter Boys Poster" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">My Life with the Walter Boys</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">93% Match</span>
+                                <span class="age-rating">TV-14</span>
+                                <span>1 Season</span>
+                            </div>
+                            <div class="genres">Romance • Teen • Drama</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[188px]">
+                        <img src="https://i.pinimg.com/1200x/af/65/d3/af65d3727a61cce878a676656eb902ab.jpg" alt="Beauty in Black" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Beauty in Black</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">96% Match</span>
+                                <span class="age-rating">TV-14</span>
+                                <span>1 Season</span>
+                            </div>
+                            <div class="genres">Drama • Romance</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[157px]">
+                        <img src="https://i.pinimg.com/1200x/4b/86/e1/4b86e18b0a43210ff79558f3ed211b62.jpg" alt="K-POP Demon Hunters" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">K-POP Demon Hunters</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">91% Match</span>
+                                <span class="age-rating">TV-Y7</span>
+                                <span>1 Season</span>
+                            </div>
+                            <div class="genres">Animation • Action • Fantasy</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[170px]">
+                        <img src="https://i.pinimg.com/1200x/65/9b/fa/659bfa81800eccfed26deb744cff265b.jpg" alt="Arcane" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Arcane</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">92% Match</span>
+                                <span class="age-rating">TV-14</span>
+                                <span>1 Season</span>
+                            </div>
+                            <div class="genres">Thriller • Mystery</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[188px]">
+                        <img src="https://i.pinimg.com/736x/d0/49/fe/d049fe761a21077abfd002b693fd9280.jpg" alt="Adolecense" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Adolescence</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">88% Match</span>
+                                <span class="age-rating">TV-MA</span>
+                                <span>1 Season</span>
+                            </div>
+                            <div class="genres">Drama • Indie</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[150px]">
+                        <img src="https://i.pinimg.com/1200x/00/2f/be/002fbe8334aba00e77c6f9d23267860e.jpg" alt="Stranger Things" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Stranger Things</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">99% Match</span>
+                                <span class="age-rating">TV-14</span>
+                                <span>4 Seasons</span>
+                            </div>
+                            <div class="genres">Sci-fi • Horror • Fantasy</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[155px]">
+                        <img src="https://i.pinimg.com/736x/b0/a5/e4/b0a5e4551c022373440551cf61784e0c.jpg" alt="Briderton" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Bridgerton</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">94% Match</span>
+                                <span class="age-rating">TV-MA</span>
+                                <span>3 Seasons</span>
+                            </div>
+                            <div class="genres">Romance • Drama • History</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[175px]">
+                        <img src="https://i.pinimg.com/736x/ad/ed/a8/adeda8bbcc5cb7ed5a608c6c214615c2.jpg" alt="Straw" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Straw</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">87% Match</span>
+                                <span class="age-rating">TV-MA</span>
+                                <span>1 Season</span>
+                            </div>
+                            <div class="genres">Drama • Thriller</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- We Think You'll Love This -->
+            <div class="content-row">
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 pl-8">We Think You'll Love This</h3>
+                <div class="flex overflow-x-scroll scroll-container py-2 gap-4 hide-scrollbar px-8">
+                    <!-- Updated cards with wider hover effect -->
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/736x/22/a7/8f/22a78fede22d75354f2ceaed617672ff.jpg" alt="Ozark" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Ozark</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">99% Match</span>
+                                <span class="age-rating">TV-MA</span>
+                                <span>4 Seasons</span>
+                            </div>
+                            <div class="genres">Crime • Drama • Thriller</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/f7/e1/46/f7e1468e091d2ecd78e444445b862a70.jpg" alt="The hunting of the bly mansion" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">The Haunting of Bly Manor</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">96% Match</span>
+                                <span class="age-rating">TV-MA</span>
+                                <span>1 Season</span>
+                            </div>
+                            <div class="genres">Horror • Drama • Mystery</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/60/aa/e6/60aae69961bc219bfbc749906152b2fa.jpg" alt="House M.D" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">House, M.D.</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">97% Match</span>
+                                <span class="age-rating">TV-14</span>
+                                <span>8 Seasons</span>
+                            </div>
+                            <div class="genres">Medical • Drama • Mystery</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/3f/ae/6e/3fae6e02b15d23557fcf2535c30cecba.jpg" alt="Suits" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Suits</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">95% Match</span>
+                                <span class="age-rating">TV-14</span>
+                                <span>9 Seasons</span>
+                            </div>
+                            <div class="genres">Drama • Comedy</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/736x/61/1a/39/611a390c170de96ab53b0133d856c029.jpg" alt="The Good Place" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">The Good Place</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">97% Match</span>
+                                <span class="age-rating">TV-14</span>
+                                <span>4 Seasons</span>
+                            </div>
+                            <div class="genres">Comedy • Fantasy</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/81/b2/d2/81b2d20c65b83e005f5c511ccdd2a6db.jpg" alt="Peaky Blinders" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Peaky Blinders</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">94% Match</span>
+                                <span class="age-rating">TV-MA</span>
+                                <span>6 Seasons</span>
+                            </div>
+                            <div class="genres">Crime • Drama • History</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/1200x/53/01/d2/5301d232916bc50827565b3d241140d3.jpg" alt="Forest Gump" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Forrest Gump</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">98% Match</span>
+                                <span class="age-rating">PG-13</span>
+                                <span>Movie</span>
+                            </div>
+                            <div class="genres">Drama • Romance</div>
+                        </div>
+                    </div>
+                    <div class="card-container w-[280px] sm:w-[350px] md:w-[450px] lg:w-[320px] xl:w-[380px]">
+                        <img src="https://i.pinimg.com/736x/e4/37/4b/e4374b56ea448ce279ea1ad38d681b8b.jpg" alt="Dexter" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                        <div class="card-info">
+                            <h3 class="text-sm font-bold mb-2">Dexter</h3>
+                            <div class="btn-group">
+                                <button class="action-btn"><i class="fas fa-play"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-thumbs-up"></i></button>
+                                <button class="action-btn"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="meta-row">
+                                <span class="match">92% Match</span>
+                                <span class="age-rating">TV-MA</span>
+                                <span>8 Seasons</span>
+                            </div>
+                            <div class="genres">Crime • Drama • Mystery</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div style="margin-top: 150px;" class="py-8 text-center bg-transparent">
+        <div class="container mx-auto px-4 lg:px-12 text-gray-400">
+            <h3 class="text-lg mb-6 text-left">Questions? Contact Us</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left text-sm">
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link">FAQ</a></li>
+                    <li><a href="#" class="footer-link">Investor Relations</a></li>
+                    <li><a href="#" class="footer-link">Privacy</a></li>
+                    <li><a href="#" class="footer-link">Speed Test</a></li>
+                </ul>
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link">Help Center</a></li>
+                    <li><a href="#" class="footer-link">Jobs</a></li>
+                    <li><a href="#" class="footer-link">Cookie Preferences</a></li>
+                    <li><a href="#" class="footer-link">Legal Notices</a></li>
+                </ul>
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link">Account</a></li>
+                    <li><a href="#" class="footer-link">Ways to Watch</a></li>
+                    <li><a href="#" class="footer-link">Corporate Information</a></li>
+                    <li><a href="#" class="footer-link">Only on Netflix</a></li>
+                </ul>
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link">Media Center</a></li>
+                    <li><a href="#" class="footer-link">Terms of Use</a></li>
+                    <li><a href="#" class="footer-link">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="mt-8 text-left">
+                <select class="bg-transparent border border-gray-600 rounded-md p-2 text-white">
+                    <option class="bg-gray-800" value="en-US">English</option>
+                    <option class="bg-gray-800" value="es-ES">Spanish</option>
+                </select>
+                <p class="text-sm mt-4 text-gray-500">Netflix Clone</p>
+            </div>
+        </div>
+    </div>
+<script>
+  // When clicking a link, fade out before navigating
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", e => {
+        const target = link.getAttribute("href");
+        if (target && !target.startsWith("#") && !link.hasAttribute("data-no-transition")) {
+          e.preventDefault();
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location.href = target;
+          }, 600); // match transition duration
+        }
+      });
+    });
+  });
+</script>
+
+
+</body>
+</html>
