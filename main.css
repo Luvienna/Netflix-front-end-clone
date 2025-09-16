@@ -60,12 +60,12 @@ body::before {
 }
 
 .hide-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none; 
 }
 
 
@@ -97,22 +97,20 @@ body {
     background-color: var(--yankees-blue);
 }
 
-/* New styles to hide the scrollbar */
 .hide-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
 }
 
-/* Removed padding from content-row to fix clipping issue */
 .content-row {
     padding: 0;
 }
 
-/* Custom glow effect on hover */
+/* glow effect on hover */
 .card-container:hover .card-img {
     box-shadow: 0 0 15px var(--razzmatazz);
     transform: scale(1.05);
@@ -128,9 +126,9 @@ body {
     transition: color 0.3s ease-in-out;
 }
 
-/* Footer specific styles */
+/* Footer */
 .footer-link {
-    font-size: 0.875rem; /* text-sm */
+    font-size: 0.875rem;
     color: #d1d5db; /* gray-400 */
     transition-property: color;
     transition-duration: 300ms;
@@ -141,13 +139,13 @@ body {
     text-decoration: underline;
 }
 
-/* Hover effect for Netflix-style cards */
+/* Hover effect for cards */
 .card-container {
     width: 100%;
     position: relative;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
-    transform-origin: center center; /* Adjusted to fix clipping */
+    transform-origin: center center;
     border-radius: 0.5rem;
     overflow: visible;
 }
@@ -214,28 +212,27 @@ body {
     background-color: #334155;
     transform: translateY(-2px);
 }
-/* Smaller button size */
+
 .action-btn {
-    width: 3rem; /* Smaller fixed width */
-    height: 3rem; /* Smaller fixed height */
+    width: 3rem; 
+    height: 3rem;
     padding: 0;
 }
 .action-btn .fas {
-    font-size: 1rem; /* Smaller icon size */
+    font-size: 1rem;
 }
 
-/* New styles for meta and genres */
 .meta-row {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-size: 0.8rem;
-    color: #9ca3af; /* A lighter grey for meta info */
+    color: #9ca3af; 
     margin-top: 0.5rem;
 }
 
 .meta-row .match {
-    color: #4ade80; /* A green color for the match percentage */
+    color: #4ade80;
     font-weight: bold;
 }
 
@@ -246,8 +243,8 @@ body {
 }
 
 .genres {
-    font-size: 0.75rem; /* text-xs */
-    color: #d1d5db; /* A lighter grey */
+    font-size: 0.75rem; 
+    color: #d1d5db; 
     margin-top: 0.5rem;
 }
 
@@ -260,3 +257,4 @@ body {
 body.fade-out {
   opacity: 0;
 }
+
